@@ -1,0 +1,41 @@
+# Node.js dependencies
+/node_modules/
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*.local
+
+# Build output
+/dist/
+/build/
+
+# Dependency directories
+jspm_packages/
+
+# IDE/editor specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# npm package lock files (optional, depending on project setup)
+package-lock.json
+yarn.lock
+
+# Optional: Coverage reports
+/coverage/
+
+# Optional: Next.js build output (if applicable)
+.next/
+
+# Optional: SASS / CSS maps
+*.css.map
+*.scss.map
