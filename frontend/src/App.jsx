@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { SoketUi } from './soketpage'
 
 function App() {
   return (
     <>
       <h1>Hello, welcome Soket io app!</h1>
+      <SoketUi />
     </>
   )
 }
