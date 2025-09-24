@@ -1,8 +1,6 @@
-// src/App.js
-
 import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
-
+import './App.css'; 
 // Connect to the server
 const socket = io('http://localhost:5000');
 
@@ -29,23 +27,29 @@ export function SoketUi() {
   };
 
   return (
-    <div className="App">
-      <h1>Socket.io Chat</h1>
+    <div className="app-container">
+      <h1 className="header">Socket.io Chat</h1>
 
-      <div>
+      <div className="messages-container">
         {messages.map((msg, index) => (
-          <p key={index}>{msg}</p>
+          <p key={index} className="message">
+            {msg}
+          </p>
         ))}
       </div>
 
-      <input
-        type="text"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Type a message..."
-      />
-      <button onClick={sendMessage}>Send</button>
+      <div className="input-container">
+        <input
+          type="text"
+          className="message-input"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Type a message..."
+        />
+        <button onClick={sendMessage} className="send-button">
+          Send
+        </button>
+      </div>
     </div>
   );
 }
-
